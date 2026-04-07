@@ -130,9 +130,7 @@ grandma-reads-papers/
 ## English
 
 **grandma-reads-papers** is a paper-reading skill for Claude Code, Codex, OpenClaw, and other skill-enabled agents.  
-It does more than summarization or translation: it explains the real idea, ranks what matters, strips away hype, and helps users understand the method clearly.
-
-"It doesn't just translate or summarize; it strips away the academic packaging, explains jargon and obscure terminology, and clearly articulates what truly matters—the key arguments, methodologies, innovations, and limitations. It concludes with suggested questions for further inquiry."
+It doesn't just translate or summarize; it strips away the academic packaging, explains jargon and obscure terminology, and clearly articulates what truly matters—the key arguments, methodologies, innovations, and limitations. It concludes with suggested questions for further inquiry.
 
 ### Features
 
