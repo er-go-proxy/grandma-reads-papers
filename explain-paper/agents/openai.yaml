@@ -1,7 +1,0 @@
-interface:
-  display_name: "Paper Teacher"
-  short_description: "Explain papers clearly, rank what matters, strip hype."
-  default_prompt: "Use $explain-paper to explain this paper in my language, rank what matters most, cut through the hype, and keep the same clarity for any follow-up questions."
-
-policy:
-  allow_implicit_invocation: true
