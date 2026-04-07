@@ -27,8 +27,8 @@
 
 > “我是一位100岁太奶，这东西我都看的头昏眼花的。年轻人弄的这些文章我都看不懂，不过我仍然宝刀未老，学习的劲头一点没减，越学越有精神。好孩子，劳驾你把这篇文章给老婆子我说道说道，让我能达到彻底看懂的效果，一定要帮我讲明白哈。最好翻译出来，因为我洋文一点看不懂，我只会中文。”
 
-**老奶奶读文献** 是一个给“想真正看懂论文的人”准备的 Skill。  
-它不只做翻译或摘要，而是把论文里的包装拆掉，把真正重要的观点、方法、创新点和局限讲清楚。
+**老奶奶读文献** 是一个给“看不懂但想看懂论文的人”准备的 Skill。  
+它不只做翻译或摘要，而是把论文里的包装拆掉，解释难以理解的词汇，并把真正重要的观点、方法、创新点和局限讲清楚。并在结尾给予提问建议。
 
 ### Features
 
@@ -131,6 +131,8 @@ grandma-reads-papers/
 
 **grandma-reads-papers** is a paper-reading skill for Claude Code, Codex, OpenClaw, and other skill-enabled agents.  
 It does more than summarization or translation: it explains the real idea, ranks what matters, strips away hype, and helps users understand the method clearly.
+
+"It doesn't just translate or summarize; it strips away the academic packaging, explains jargon and obscure terminology, and clearly articulates what truly matters—the key arguments, methodologies, innovations, and limitations. It concludes with suggested questions for further inquiry."
 
 ### Features
 
