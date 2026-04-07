@@ -4,9 +4,20 @@
 
 ### 老奶奶读文献
 
-**A portable paper-explainer skill for Claude Code, Codex, OpenClaw, and other skill-enabled agents.**
+![Platforms](https://img.shields.io/badge/Platforms-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw-2563eb)
+![Modes](https://img.shields.io/badge/Modes-Overview%20%7C%20Deep--Dive-16a34a)
+![Languages](https://img.shields.io/badge/Languages-ZH%20%7C%20EN%20%7C%20More-f59e0b)
+![Type](https://img.shields.io/badge/Type-Skill-7c3aed)
 
-**一个论文辅助阅读 Skill，适用于 Claude Code、Codex、OpenClaw 以及其他支持 Skill 的 Agent / IDE / 大模型。**
+<p>
+  <strong>一个论文辅助阅读 Skill，适用于 Claude Code、Codex、OpenClaw 以及其他支持 Skill 的 Agent / IDE / 大模型。</strong><br/>
+  <strong>用通俗易懂的语言帮助你快速 / 深度理解论文观点和方法原理。</strong>
+</p>
+
+<p>
+  <strong>A paper-reading skill for Claude Code, Codex, OpenClaw, and other skill-enabled agents.</strong><br/>
+  <strong>Helps you understand paper ideas and method principles in plain language, fast or deep.</strong>
+</p>
 
 </div>
 
@@ -16,112 +27,94 @@
 
 > “我是一位100岁太奶，这东西我都看的头昏眼花的。年轻人弄的这些文章我都看不懂，不过我仍然宝刀未老，学习的劲头一点没减，越学越有精神。好孩子，劳驾你把这篇文章给老婆子我说道说道，让我能达到彻底看懂的效果，一定要帮我讲明白哈。最好翻译出来，因为我洋文一点看不懂，我只会中文。”
 
-**老奶奶读文献** 是一个面向多种 Skill Agent 的论文讲解仓库。  
-它不只是“翻译论文”，而是把论文讲成人话：先抓重点，再拆原理；先去包装，再看本质。
+**老奶奶读文献** 是一个给“想真正看懂论文的人”准备的 Skill。  
+它不只做翻译或摘要，而是把论文里的包装拆掉，把真正重要的观点、方法、创新点和局限讲清楚。
 
-### 适合什么场景
+### Features
 
-- 想快速判断一篇论文值不值得深挖
-- 想真正吃透方法细节、模型结构、训练逻辑
-- 想把英文论文高效转成中文理解
-- 想继续追问公式、模块、背景知识、技巧时，仍然得到清晰回答
-- 想结合相关文献和开源代码，看透论文到底“新”在哪
+- `概读`：快速抓住论文在解决什么问题、核心思路是什么、创新到底大不大。
+- `精读`：拆开模型结构、训练逻辑、损失函数、推理流程，讲清方法原理。
+- `连续追问`：后续继续问公式、模块、背景知识、技巧时，仍然保持清晰、抓重点、说人话。
+- `多语言辅助阅读与翻译`：支持中、英文等多种语言的论文辅助阅读与解释。
+- `关联文献`：把论文放回研究脉络里，看它和前代工作、经典论文、热点方向的关系。
+- `代码解读`：有开源代码时，优先结合代码看论文，避免被花哨命名带偏。
+- `类比讲解`：遇到难点时先用类比帮助上手，但类比后一定回扣真实机制和边界。
 
-### 这个 Skill 的特点
+### Why This Skill
 
 - 说人话，不卖弄
 - 抓重点，不铺陈废话
 - 去掉论文包装，直接看本质
-- 支持概读、精读、连续追问
-- 支持类比讲解，但类比后一定回扣真实原理
-- 会结合前代工作、经典论文、热点方向判断创新成色
+- 会判断“这到底是真创新，还是小改动换了个名字”
 - 讲解更有活力，但不过度表演
 
-### 兼容对象
+### Compatibility
 
 - Claude Code
 - Codex
 - OpenClaw
 - 其他支持 Skill 的 Agent、IDE 或大模型工作流
 
-### 安装方式
+### Install
 
-#### 方式一：在支持 Skill 安装的 Agent 中直接对话
+#### 方式一：直接对话安装
 
-在 Claude Code、Codex、OpenClaw 等支持 Skill 的 Agent 中，直接对话：
+在 Claude Code、Codex、OpenClaw 等支持 Skill 的 Agent 中，直接说：
 
 ```text
 安装这个 skill：https://github.com/er-go-proxy/grandma-reads-papers
 ```
 
-如果你的 Agent 支持从 GitHub 仓库直接安装 Skill，这通常就是最快的方式。
-
 #### 方式二：手动添加
-
-1. 克隆这个仓库
-2. 找到其中的 [`explain-paper/`](./explain-paper) 文件夹
-3. 把它复制到你的 Skill 目录
-4. 保留目录名 `explain-paper`
-
-示例：
 
 ```bash
 git clone https://github.com/er-go-proxy/grandma-reads-papers.git
 ```
 
-然后将：
+把 [`grandma-reads-papers/`](./grandma-reads-papers) 这个文件夹复制到你的 Skill 目录，并保留目录名 `grandma-reads-papers`。
+
+示例：
 
 ```text
-grandma-reads-papers/explain-paper
+~/.codex/skills/grandma-reads-papers
 ```
 
-复制到你的 Skill 目录，例如：
+Windows:
 
 ```text
-~/.codex/skills/explain-paper
+C:\Users\<YourName>\.codex\skills\grandma-reads-papers
 ```
-
-或在 Windows 中：
-
-```text
-C:\Users\<YourName>\.codex\skills\explain-paper
-```
-
-如果你的 Agent 使用别的 Skill 目录规范，只需要按它自己的方式导入这个 `explain-paper/` 文件夹即可。
 
 其中：
 
-- [`explain-paper/SKILL.md`](./explain-paper/SKILL.md) 是核心讲解规则，最通用
-- [`explain-paper/references/`](./explain-paper/references) 是配套参考资料
-- [`explain-paper/agents/openai.yaml`](./explain-paper/agents/openai.yaml) 是部分生态会读取的额外元数据，不是唯一入口
+- [`grandma-reads-papers/SKILL.md`](./grandma-reads-papers/SKILL.md) 是最通用的核心入口
+- [`grandma-reads-papers/references/`](./grandma-reads-papers/references) 是配套参考资料
+- [`grandma-reads-papers/agents/openai.yaml`](./grandma-reads-papers/agents/openai.yaml) 是部分生态会读取的可选元数据
 
-### 使用方法
+不同 Agent 的自动触发机制不完全一样，但通常主要看 `SKILL.md` 里的 `description`。  
+所以这个 skill 既可以靠相关任务描述自动触发，也可以显式写 `$grandma-reads-papers` 来更稳定地调用。
 
-安装完成后，可以直接这样说：
-
-```text
-用 $explain-paper 用中文概读这篇论文，先讲最重要的点，再讲核心原理；如果有难点，请先类比，再把类比对应回真实机制。
-```
-
-或者：
+### Usage
 
 ```text
-用 $explain-paper 用中文精读这篇论文，结合相关工作和开源代码，告诉我它到底改了什么，这个创新到底算大还是小。
+用 $grandma-reads-papers 用中文概读这篇论文，先讲最重要的点，再讲核心原理；如果有难点，请先类比，再把类比对应回真实机制。
 ```
 
-后续还可以继续追问：
+```text
+用 $grandma-reads-papers 用中文精读这篇论文，结合相关工作和开源代码，告诉我它到底改了什么，这个创新到底算大还是小。
+```
 
 ```text
 继续讲刚才那个模块，它为什么有效？和前代方法相比到底差在哪？
 ```
 
-### 仓库结构
+### Repo Layout
 
 ```text
 grandma-reads-papers/
 ├─ README.md
 ├─ .gitignore
-└─ explain-paper/
+└─ grandma-reads-papers/
    ├─ SKILL.md
    ├─ agents/
    │  └─ openai.yaml
@@ -132,48 +125,26 @@ grandma-reads-papers/
       └─ style-guide.md
 ```
 
-### 一句话总结
-
-这是一个给“想真正看懂论文的人”准备的 Skill。  
-它的目标不是把论文翻得更像论文，而是把论文讲得更像一个真正懂的人在教你。
-
 ---
 
 ## English
 
-**grandma-reads-papers** is a portable paper-explainer skill repository for Claude Code, Codex, OpenClaw, and other skill-enabled agents.  
-It does more than summarize or translate papers: it explains the real idea, ranks what matters, strips away hype, and keeps follow-up answers clear.
+**grandma-reads-papers** is a paper-reading skill for Claude Code, Codex, OpenClaw, and other skill-enabled agents.  
+It does more than summarization or translation: it explains the real idea, ranks what matters, strips away hype, and helps users understand the method clearly.
 
-### What it is for
+### Features
 
 - Fast paper overviews
-- Deep method understanding
-- Clear follow-up explanations
+- Deep method breakdowns
+- Follow-up explanations that stay structured
+- Multilingual paper reading and translation support, including Chinese and English
 - Related-work grounding
 - Code-aware interpretation
 - Analogy-based teaching that maps back to the actual mechanism
 
-### Highlights
-
-- Plain language first
-- Priority-aware explanations
-- Honest novelty assessment
-- Overview mode and deep-dive mode
-- Follow-up questions stay structured
-- Light energy, low fluff
-
-### Compatibility
-
-- Claude Code
-- Codex
-- OpenClaw
-- Other skill-enabled agents, IDEs, and LLM workflows
-
-### Installation
+### Install
 
 #### Option 1: install by chatting with your agent
-
-In Claude Code, Codex, OpenClaw, or another agent that supports remote skill installation, you can simply say:
 
 ```text
 Install this skill: https://github.com/er-go-proxy/grandma-reads-papers
@@ -181,30 +152,19 @@ Install this skill: https://github.com/er-go-proxy/grandma-reads-papers
 
 #### Option 2: add it manually
 
-Clone the repository:
-
 ```bash
 git clone https://github.com/er-go-proxy/grandma-reads-papers.git
 ```
 
-Then copy [`explain-paper/`](./explain-paper) into your local skills directory and keep the folder name as `explain-paper`.
+Then copy [`grandma-reads-papers/`](./grandma-reads-papers) into your local skills directory and keep the folder name as `grandma-reads-papers`.
 
-If your agent uses a different skill directory convention, import the same folder according to that platform's documentation.
+The portable core lives in [`grandma-reads-papers/SKILL.md`](./grandma-reads-papers/SKILL.md).  
+[`grandma-reads-papers/agents/openai.yaml`](./grandma-reads-papers/agents/openai.yaml) is optional ecosystem metadata for platforms that read it.
 
-The portable core lives in [`explain-paper/SKILL.md`](./explain-paper/SKILL.md).  
-[`explain-paper/agents/openai.yaml`](./explain-paper/agents/openai.yaml) is optional ecosystem metadata for platforms that read it.
+Explicit invocation with `$grandma-reads-papers` is the most reliable cross-agent option.
 
 ### Usage
 
 ```text
-Use $explain-paper to explain this paper in my language, rank what matters most, strip the hype, and map any analogy back to the real mechanism.
-```
-
-### Repo Layout
-
-```text
-grandma-reads-papers/
-├─ README.md
-├─ .gitignore
-└─ explain-paper/
+Use $grandma-reads-papers to explain this paper in my language, rank what matters most, strip the hype, and map any analogy back to the real mechanism.
 ```
