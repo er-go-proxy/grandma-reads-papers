@@ -6,7 +6,7 @@
 
 **A portable paper-explainer skill for Claude Code, Codex, OpenClaw, and other skill-enabled agents.**
 
-**一个可移植的论文讲解 Skill，适用于 Claude Code、Codex、OpenClaw 以及其他支持 Skill 的 Agent / IDE / 大模型。**
+**一个论文辅助阅读 Skill，适用于 Claude Code、Codex、OpenClaw 以及其他支持 Skill 的 Agent / IDE / 大模型。**
 
 </div>
 
